@@ -492,7 +492,7 @@ namespace UnityEngine.Rendering.HighDefinition
         }
 
         // Ray Tracing is supported if the asset setting supports it and the platform supports it
-        static internal bool AggreateRayTracingSupport(RenderPipelineSettings rpSetting)
+        static internal bool GatherRayTracingSupport(RenderPipelineSettings rpSetting)
             => rpSetting.supportRayTracing && rayTracingSupportedBySystem;
 
         static internal bool rayTracingSupportedBySystem
