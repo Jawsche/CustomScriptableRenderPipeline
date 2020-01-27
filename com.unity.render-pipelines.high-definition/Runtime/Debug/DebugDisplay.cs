@@ -199,7 +199,7 @@ namespace UnityEngine.Rendering.HighDefinition
 
         Action IDebugData.GetReset() => () => m_Data = new DebugData();
 
-        public float[] GetDebugMaterialIndexes()
+        internal float[] GetDebugMaterialIndexes()
         {
             return data.materialDebugSettings.GetDebugMaterialIndexes();
         }
