@@ -23,6 +23,8 @@ namespace UnityEngine.Rendering.HighDefinition
         ScreenSpaceReflections,
         /// <summary>Display Contact Shadows buffer.</summary>
         ContactShadows,
+        /// <summary>Display Contact Shadows fade.</summary>
+        ContactShadowsFade,
         /// <summary>Display Screen Space Shadows.</summary>
         ScreenSpaceShadows,
         /// <summary>Displays the color pyramid before the refraction pass.</summary>
