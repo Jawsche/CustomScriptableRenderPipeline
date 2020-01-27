@@ -5,41 +5,69 @@ using UnityEngine.Rendering.HighDefinition.Attributes;
 
 namespace UnityEngine.Rendering.HighDefinition
 {
+    /// <summary>
+    /// Full Screen Debug Mode.
+    /// </summary>
     [GenerateHLSL]
     public enum FullScreenDebugMode
     {
+        /// <summary>No Full Screen debug mode.</summary>
         None,
 
         // Lighting
+        /// <summary>Minimum Full Screen Lighting debug mode value (used internally).</summary>
         MinLightingFullScreenDebug,
+        /// <summary>Display Screen Space Ambient Occlusion buffer.</summary>
         SSAO,
+        /// <summary>Display SCreen Space Reflections buffer.</summary>
         ScreenSpaceReflections,
+        /// <summary>Display Contact Shadows buffer.</summary>
         ContactShadows,
+        /// <summary>Display Contact Shadows fade buffer.</summary>
         ContactShadowsFade,
+        /// <summary>Display Screen Space Shadows.</summary>
         ScreenSpaceShadows,
+        /// <summary>Displays the color pyramid before the refraction pass.</summary>
         PreRefractionColorPyramid,
+        /// <summary>Display the Depth Pyramid.</summary>
         DepthPyramid,
+        /// <summary>Display the final color pyramid for the frame.</summary>
         FinalColorPyramid,
 
         // Raytracing Only
+        /// <summary>Display ray tracing light cluster.</summary>
         LightCluster,
+        /// <summary>Display ray tracing global illumination.</summary>
         RayTracedGlobalIllumination,
+        /// <summary>Display recursive ray tracing.</summary>
         RecursiveRayTracing,
+        /// <summary>Maximum Full Screen Lighting debug mode value (used internally).</summary>
         MaxLightingFullScreenDebug,
 
         // Rendering
+        /// <summary>Minimum Full Screen Rendering debug mode value (used internally).</summary>
         MinRenderingFullScreenDebug,
+        /// <summary>Display Motion Vectors.</summary>
         MotionVectors,
+        /// <summary>Display NaNs.</summary>
         NanTracker,
+        /// <summary>Display Log of the color buffer.</summary>
         ColorLog,
+        /// <summary>Display Depth of Field circle of confusion.</summary>
         DepthOfFieldCoc,
+        /// <summary>Display Transparency Overdraw.</summary>
         TransparencyOverdraw,
+        /// <summary>Maximum Full Screen Rendering debug mode value (used internally).</summary>
         MaxRenderingFullScreenDebug,
 
         //Material
+        /// <summary>Minimum Full Screen Material debug mode value (used internally).</summary>
         MinMaterialFullScreenDebug,
+        /// <summary>Display Diffuse Color validation mode.</summary>
         ValidateDiffuseColor,
+        /// <summary>Display specular Color validation mode.</summary>
         ValidateSpecularColor,
+        /// <summary>Maximum Full Screen Material debug mode value (used internally).</summary>
         MaxMaterialFullScreenDebug
     }
 
@@ -802,7 +830,7 @@ namespace UnityEngine.Rendering.HighDefinition
             }
 
             list.Add(new DebugUI.FloatField { displayName = "Debug Overlay Screen Ratio", getter = () => data.debugOverlayRatio, setter = v => data.debugOverlayRatio = v, min = () => 0.1f, max = () => 1f});
-            
+
             if (DebugNeedsExposure() || data.lightingDebugSettings.displaySkyReflection
                     || data.lightingDebugSettings.displayPlanarReflectionProbeAtlas
                     || data.lightingDebugSettings.displayCookieAtlas
